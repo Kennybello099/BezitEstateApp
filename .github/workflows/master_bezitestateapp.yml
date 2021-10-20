@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'bezitestateapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DDEEEFC7DB96437BA41D889415AE7782 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C820FAE7ED5A4BB18F572C0EF94B244D }}
           package: .
