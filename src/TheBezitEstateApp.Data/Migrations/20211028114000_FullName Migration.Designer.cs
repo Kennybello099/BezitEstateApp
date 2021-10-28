@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TheBezitEstateApp.Data.DatabaseContexts.AuthenticationDbContext;
 
 namespace TheBezitEstateApp.Data.Migrations
 {
     [DbContext(typeof(AuthenticationDatabase))]
-    partial class AuthenticationDatabaseModelSnapshot : ModelSnapshot
+    [Migration("20211028114000_FullName Migration")]
+    partial class FullNameMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
