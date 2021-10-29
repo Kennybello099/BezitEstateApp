@@ -10,15 +10,15 @@ using TheBezitEstateApp.Data.DatabaseContexts.ApplicationDbContext;
 namespace TheBezitEstateApp.Data.Migrations.ApplicationDatabaseMigrations
 {
     [DbContext(typeof(ApplicationDatabase))]
-    [Migration("20211022143312_Initial ApplicationDb Migration")]
-    partial class InitialApplicationDbMigration
+    [Migration("20211029110330_Initial Application")]
+    partial class InitialApplication
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasAnnotation("ProductVersion", "3.1.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("TheBezitEstateApp.Data.Entities.Contact", b =>
