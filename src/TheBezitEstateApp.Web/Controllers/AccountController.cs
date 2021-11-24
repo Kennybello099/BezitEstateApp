@@ -48,8 +48,8 @@ namespace TheBezitEstateApp.Web.Controllers
                      ModelState.AddModelError("", errorMessage);
                     return View();
                 }
-                return LocalRedirect("~/"); // this will reutn the user to the homepage
-
+                return LocalRedirect("~/"); // this will log in the user
+               
             }
             catch (Exception ex)
             {
@@ -74,7 +74,7 @@ namespace TheBezitEstateApp.Web.Controllers
             {
                var user = await _accountService.CreateUserAsync(model);
                await _signInManager.SignInAsync(user, isPersistent: false); //this will sign them in after creating the user;
-               return LocalRedirect("~/"); //after signng a user in, this will retutn the user to the homepage of our application
+               return LocalRedirect("~/"); //after signng a user in, this will return the user to the homepage of our application
 
             }
             catch(Exception ex)

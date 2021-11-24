@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/04234509-cee4-4204-a2e7-5671aff6ce40/resourceGroups/newbezitestateapp/providers/Microsoft.Web/sites/newbezitestateapp",
+    "appService.deploySubpath": "."
+}
