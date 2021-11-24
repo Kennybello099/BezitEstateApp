@@ -5,22 +5,27 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using TheBezitEstateApp.Web.Models;
 
 namespace TheBezitEstateApp.Web.Controllers
 {
-    [Route("[controller]")]
     public class PropertiesController : Controller
     {
-        
-
-        public PropertiesController()
-        {
-            
-        }
-
-        public IActionResult Index()
+    
+        [HttpGet]
+         public IActionResult Index()
         {
             return View();
+        }
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        public IActionResult Add(PropertyModel model )
+        {
+            throw new NotImplementedException();
         }
 
        
