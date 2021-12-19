@@ -35,7 +35,7 @@ namespace TheBezitEstateApp.Web.Controllers
             return View();
         }
 
-        [Authorize] //The authorize will disalow user to access this if user did not log in
+         //The authorize will disalow user to access this if user did not log in
         [HttpPost]
         public async Task<IActionResult> Add(PropertyModel model )
         {
