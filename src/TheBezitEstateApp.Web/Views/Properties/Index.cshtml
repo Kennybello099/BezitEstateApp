@@ -1,1 +1,25 @@
+ @model IEnumerable<TheBezitEstateApp.Data.Entities.Property>
+ 
  <h1>Property Page</h1> 
+
+ @if(Model is Object)
+ {
+     @foreach(var property in Model )
+     {
+         <h3>@property.Title</h3>
+         <hr/>
+         <p>@property.Price</p>
+         <p>@property.Address</p>
+         <p>@property.ContactPhoneNumber</p>
+
+
+
+    }
+ }
+
+ @* This is called a razor.It simply a way where you can use your C# syntax. using the .cshtml
+ 
+Thr @ sign differentiate the C# syntax from the regular text 
+
+//we added git commit - "can add properties and view properties from the db"
+*@

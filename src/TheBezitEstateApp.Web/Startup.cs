@@ -13,7 +13,6 @@ using TheBezitEstateApp.Web.Services;
 using TheBezitEstateApp.Data.DatabaseContexts.ApplicationDbContext;
 using TheBezitEstateApp.Data.DatabaseContexts.AuthenticationDbContext;
 
-
 namespace TheBezitEstateApp.Web
 {
     public class Startup
@@ -59,8 +58,9 @@ namespace TheBezitEstateApp.Web
 
             services.AddControllersWithViews();
             services.AddTransient<IAccountService, AccountService>();
+            services.AddTransient<IPropertyService, PropertyService>();
         }
-
+ 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider svp)
         {
@@ -118,7 +118,6 @@ namespace TheBezitEstateApp.Web
                     await roleManager.CreateAsync(new IdentityRole{Name = role});
                 }
             }
-
             var userManager = svp.GetRequiredService<UserManager<ApplicationUser>>();
             var user = await userManager.FindByEmailAsync(userEmail);
             if(user is null)
